@@ -24,6 +24,7 @@ public class ContaTerminal {
     System.out.println("Agência: " + agencia);
     System.out.println("Nome do Cliente: " + nomeCliente);
     System.out.println("O saldo da conta é de R$" + saldo);
+    scanner.close();
   }
 
   public void depositar(double valor) {
