@@ -1,0 +1,60 @@
+
+  int numero = 1021;
+  String agencia = "067-B";
+  String nomeCliente = "Mario Andrade";
+  double saldo = 237.48D;
+
+  /**
+   * <h3>Método para realizar um depósito para conta do cliente.</h3>
+   * <br/>
+   * Realiza um depósito para conta do cliente.
+   * 
+   * @param valor
+   */
+  public void depositar(double valor) {
+    saldo += valor;
+    System.out.println("O valor de R$" + valor + " foi adicionar.");
+    System.out.println("O novo saldo é de R$" + saldo);
+  }
+
+  /**
+   * <h3>Método para realizar um saque da conta do cliente.</h3>
+   * <p>
+   * Realiza um saque caso haja saldo disponível.
+   * </p>
+   * <br/>
+   * <p>
+   * IMPORTANTE: Caso não houver saldo suficiente para realizar o saque, será
+   * informado via terminal.
+   * </p>
+   * <br/>
+   * 
+   * @param valor
+   * 
+   */
+  public void sacar(double valor) {
+    if (saldo - valor >= 0) {
+      System.out.println("O saque foi autorizado.");
+      System.out.println("Foi realizado um saque no valor de R$" + valor);
+      System.out.println("O novo saldo é de R$" + saldo);
+    } else {
+      System.out.println("Saldo insuficiente.");
+    }
+  }
+
+  /**
+   * Informa o saldo do cliente.
+   */
+  public void exibirSaldo() {
+    System.out.println("O saldo atual é de R$" + saldo);
+  }
+
+  /**
+   * Informa os detalhes da conta
+   */
+  public void exibirDetalhesConta() {
+    System.out.println("Numero da conta: " + numero);
+    System.out.println("Agência: " + agencia);
+    System.out.println("Nome do Cliente: " + nomeCliente);
+    System.out.println("O saldo da conta é de R$" + saldo);
+  }
